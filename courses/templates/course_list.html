@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <h1>Dostępne kursy</h1>
+    <p class="muted">Przeglądaj kursy, zapisuj się i śledź postęp nauki.</p>
+</div>
+
+{% if courses %}
+    <ul class="course-list">
+        {% for course in courses %}
+            <li class="course-item">
+                <h2>
+                    <a href="{% url 'courses:course_detail' course.pk %}" style="text-decoration:none; color:#111827;">
+                        {{ course.title }}
+                    </a>
+                </h2>
+
+                <p><strong>Poziom:</strong> {{ course.get_level_display }}</p>
+                <p class="muted">{{ course.description }}</p>
+
+                {% if user.is_authenticated %}
+                    {% with progress=course_progress|get_item:course.id %}
+                        {% if progress %}
+                            {% if progress.is_enrolled %}
+                                <p>
+                                    <span class="badge badge-success">Zapisany</span>
+                                </p>
+
+                                <div class="progress-wrapper">
+                                    <div class="progress-bar" style="width: {{ progress.progress_percent }}%;"></div>
+                                </div>
+
+                                <p class="muted">
+                                    Ukończono: {{ progress.completed_lessons }} / {{ progress.total_lessons }} lekcji
+                                    ({{ progress.progress_percent }}%)
+                                </p>
+                            {% else %}
+                                <p>
+                                    <span class="badge badge-warning">Nie jesteś zapisany</span>
+                                </p>
+                            {% endif %}
+                        {% endif %}
+                    {% endwith %}
+                {% endif %}
+
+                <a href="{% url 'courses:course_detail' course.pk %}" class="btn top-space">Przejdź do kursu</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <div class="card">
+        <p>Brak kursów w bazie.</p>
+    </div>
+{% endif %}
+{% endblock %}

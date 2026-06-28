@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card" style="text-align: center; padding: 40px;">
+    <h1>Certyfikat ukończenia</h1>
+    <p class="muted">Gratulacje! Ukończyłeś kurs w serwisie EduPortal.</p>
+
+    <div style="border: 3px solid #e5e7eb; border-radius: 16px; padding: 32px; margin-top: 24px; background: #fffbeb;">
+        <h2 style="margin-bottom: 8px;">{{ user.username }}</h2>
+        <p>ukończył kurs</p>
+        <h2 style="color: #a16207;">{{ course.title }}</h2>
+
+        <p class="top-space">
+            Wynik ukończenia: <strong>{{ progress_percent }}%</strong>
+        </p>
+        <p>
+            Ukończone lekcje: <strong>{{ completed_lessons }} / {{ total_lessons }}</strong>
+        </p>
+
+        <p class="muted top-space">Brawo za konsekwentną naukę i ukończenie materiału.</p>
+    </div>
+
+    <div class="actions" style="justify-content: center; margin-top: 24px;">
+        <a href="{% url 'courses:my_courses' %}" class="btn">Wróć do mojego progresu</a>
+        <a href="{% url 'courses:course_detail' course.pk %}" class="btn btn-secondary">Wróć do kursu</a>
+    </div>
+</div>
+{% endblock %}

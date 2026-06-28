@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <h1>Mój progres</h1>
+    <p class="muted">Tutaj widzisz wszystkie kursy, na które jesteś zapisany, oraz aktualny postęp.</p>
+</div>
+
+{% if my_courses_data %}
+    {% for item in my_courses_data %}
+        <div class="card">
+            <h2>{{ item.course.title }}</h2>
+            <p><strong>Poziom:</strong> {{ item.course.get_level_display }}</p>
+
+            <div class="progress-wrapper">
+                <div class="progress-bar" style="width: {{ item.progress_percent }}%;"></div>
+            </div>
+
+            <p class="muted">
+                Ukończono: {{ item.completed_lessons }} / {{ item.total_lessons }} lekcji
+                ({{ item.progress_percent }}%)
+            </p>
+
+            <a href="{% url 'courses:course_detail' item.course.pk %}" class="btn">Przejdź do kursu</a>
+        </div>
+    {% endfor %}
+{% else %}
+    <div class="card">
+        <p>Nie jesteś jeszcze zapisany na żaden kurs.</p>
+    </div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ course.title }}</h1>
+
+<p><strong>Poziom:</strong> {{ course.get_level_display }}</p>
+<p>{{ course.description }}</p>
+
+{% if user.is_authenticated %}
+    {% if is_enrolled %}
+        <p><strong>Jesteś zapisany na ten kurs.</strong></p>
+        <p>Postęp: {{ completed_lessons }} / {{ total_lessons }} lekcji ({{ progress_percent }}%)</p>
+    {% else %}
+        <form method="post" action="{% url 'courses:enroll_course' course.pk %}">
+            {% csrf_token %}
+            <button type="submit">Zapisz się na kurs</button>
+        </form>
+    {% endif %}
+{% else %}
+    <p>Zaloguj się, aby zapisać się na kurs i śledzić postęp.</p>
+{% endif %}
+
+<hr>
+
+<h2>Moduły kursu</h2>
+
+{% for module in course.modules.all %}
+    <div style="margin-bottom: 20px;">
+        <h3>{{ module.order }}. {{ module.title }}</h3>
+        <p>{{ module.description }}</p>
+
+        {% if module.lessons.all %}
+            <ul>
+                {% for lesson in module.lessons.all %}
+                    <li>
+                        <a href="{% url 'courses:lesson_detail' lesson.pk %}">
+                            {{ lesson.order }}. {{ lesson.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Brak lekcji w tym module.</p>
+        {% endif %}
+    </div>
+{% empty %}
+    <p>Ten kurs nie ma jeszcze modułów.</p>
+{% endfor %}
+{% endblock %}

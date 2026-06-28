@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <h1>{{ lesson.title }}</h1>
+    <p><strong>Kurs:</strong> {{ lesson.module.course.title }}</p>
+    <p><strong>Moduł:</strong> {{ lesson.module.title }}</p>
+
+    <div class="actions">
+        <a href="{% url 'courses:course_detail' lesson.module.course.pk %}" class="btn btn-secondary">
+            Wróć do kursu
+        </a>
+
+        {% if next_lesson and next_lesson.id != lesson.id %}
+            <a href="{% url 'courses:continue_course' lesson.module.course.pk %}" class="btn">
+                Następna lekcja
+            </a>
+        {% endif %}
+    </div>
+</div>
+
+<div class="card">
+    <h2>Treść lekcji</h2>
+    <p>{{ lesson.content }}</p>
+</div>
+
+<div class="card">
+    <h2>Status lekcji</h2>
+
+    {% if completed %}
+        <p><span class="badge badge-success">Lekcja ukończona</span></p>
+    {% else %}
+        <p><span class="badge badge-warning">Lekcja jeszcze nieukończona</span></p>
+
+        <form method="post" action="{% url 'courses:complete_lesson' lesson.pk %}">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-success">Oznacz jako ukończoną</button>
+        </form>
+    {% endif %}
+</div>
+
+<div class="card">
+    <h2>Postęp w kursie</h2>
+
+    {% if course_is_completed %}
+        <p><span class="badge badge-gold">Masz ukończony cały kurs</span></p>
+    {% endif %}
+
+    <div class="progress-wrapper">
+        <div class="progress-bar" style="width: {{ course_progress_percent }}%;"></div>
+    </div>
+
+    <p class="muted">
+        Ukończono: {{ course_completed_lessons }} / {{ course_total_lessons }} lekcji
+        ({{ course_progress_percent }}%)
+    </p>
+
+    <div class="actions">
+        {% if course_is_completed %}
+            <a href="{% url 'courses:course_certificate' course.pk %}" class="btn btn-gold">Przejdź do certyfikatu</a>
+        {% elif next_lesson and next_lesson.id != lesson.id %}
+            <a href="{% url 'courses:continue_course' course.pk %}" class="btn">Kontynuuj naukę</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

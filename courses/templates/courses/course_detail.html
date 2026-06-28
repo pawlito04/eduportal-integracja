@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <h1>{{ course.title }}</h1>
+    <p><strong>Poziom:</strong> {{ course.get_level_display }}</p>
+    <p class="muted">{{ course.description }}</p>
+
+    {% if user.is_authenticated %}
+        {% if is_enrolled %}
+            <p>
+                <span class="badge badge-success">Jesteś zapisany na ten kurs</span>
+                {% if is_completed %}
+                    <span class="badge badge-gold">Kurs ukończony</span>
+                {% endif %}
+            </p>
+
+            <div class="progress-wrapper">
+                <div class="progress-bar" style="width: {{ progress_percent }}%;"></div>
+            </div>
+
+            <p class="muted">
+                Postęp: {{ completed_lessons }} / {{ total_lessons }} lekcji ({{ progress_percent }}%)
+            </p>
+
+            <div class="actions">
+                {% if not is_completed and next_lesson %}
+                    <a href="{% url 'courses:continue_course' course.pk %}" class="btn btn-success">Kontynuuj naukę</a>
+                {% endif %}
+
+                {% if is_completed %}
+                    <a href="{% url 'courses:course_certificate' course.pk %}" class="btn btn-gold">Zobacz certyfikat</a>
+                {% endif %}
+            </div>
+        {% else %}
+            <form method="post" action="{% url 'courses:enroll_course' course.pk %}">
+                {% csrf_token %}
+                <button type="submit" class="btn">Zapisz się na kurs</button>
+            </form>
+        {% endif %}
+    {% else %}
+        <p>
+            <a href="{% url 'login' %}" class="btn">Zaloguj się, aby rozpocząć</a>
+        </p>
+    {% endif %}
+</div>
+
+<div class="card">
+    <h2>Moduły i lekcje</h2>
+
+    {% for module in modules %}
+        <div style="margin-bottom: 24px;">
+            <h3>{{ module.title }}</h3>
+
+            {% if module.lesson_set.all %}
+                <ul class="lesson-list">
+                    {% for lesson in module.lesson_set.all %}
+                        <li class="lesson-item">
+                            <h4>
+                                {% if is_enrolled %}
+                                    <a href="{% url 'courses:lesson_detail' lesson.pk %}" style="text-decoration:none; color:#111827;">
+                                        {{ lesson.title }}
+                                    </a>
+                                {% else %}
+                                    {{ lesson.title }}
+                                {% endif %}
+                            </h4>
+
+                            {% if user.is_authenticated and is_enrolled %}
+                                {% if lesson.id in completed_lesson_ids %}
+                                    <p><span class="badge badge-success">Ukończona</span></p>
+                                {% else %}
+                                    <p><span class="badge badge-info">Nieukończona</span></p>
+                                {% endif %}
+
+                                <a href="{% url 'courses:lesson_detail' lesson.pk %}" class="btn btn-secondary">Otwórz lekcję</a>
+                            {% else %}
+                                <p class="muted">Zapisz się na kurs, aby odblokować lekcje.</p>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>Brak lekcji w tym module.</p>
+            {% endif %}
+        </div>
+    {% empty %}
+        <p>Brak modułów w tym kursie.</p>
+    {% endfor %}
+</div>
+{% endblock %}
