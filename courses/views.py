@@ -1,11 +1,14 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, redirect, render
 
-from .models import Course, Lesson, Enrollment, LessonProgress
+from .models import Course, Enrollment, Lesson, LessonProgress
 
 
 def get_course_lessons(course):
-    return Lesson.objects.filter(module__course=course).order_by("module_id", "id")
+    return Lesson.objects.filter(module__course=course).order_by(
+        "module_id",
+        "id",
+    )
 
 
 def get_completed_lesson_ids(user, course=None):
@@ -29,14 +32,22 @@ def build_course_progress(user, course):
     next_lesson = None
 
     if user.is_authenticated:
-        is_enrolled = Enrollment.objects.filter(user=user, course=course).exists()
+        is_enrolled = Enrollment.objects.filter(
+            user=user,
+            course=course,
+        ).exists()
         completed_lesson_ids = get_completed_lesson_ids(user, course)
         completed_lessons = len(completed_lesson_ids)
 
         if total_lessons > 0:
-            progress_percent = int((completed_lessons / total_lessons) * 100)
+            progress_percent = int(
+                (completed_lessons / total_lessons) * 100
+            )
 
-        is_completed = total_lessons > 0 and completed_lessons == total_lessons
+        is_completed = (
+            total_lessons > 0
+            and completed_lessons == total_lessons
+        )
 
         for lesson in lessons:
             if lesson.id not in completed_lesson_ids:
@@ -104,7 +115,7 @@ def lesson_detail(request, pk):
 
     is_enrolled = Enrollment.objects.filter(
         user=request.user,
-        course=course
+        course=course,
     ).exists()
 
     if not is_enrolled:
@@ -113,7 +124,7 @@ def lesson_detail(request, pk):
     completed = LessonProgress.objects.filter(
         user=request.user,
         lesson=lesson,
-        completed=True
+        completed=True,
     ).exists()
 
     progress = build_course_progress(request.user, course)
@@ -138,7 +149,7 @@ def enroll_course(request, pk):
 
     Enrollment.objects.get_or_create(
         user=request.user,
-        course=course
+        course=course,
     )
 
     return redirect("courses:course_detail", pk=course.pk)
@@ -151,7 +162,7 @@ def complete_lesson(request, pk):
 
     enrollment_exists = Enrollment.objects.filter(
         user=request.user,
-        course=course
+        course=course,
     ).exists()
 
     if not enrollment_exists:
@@ -160,7 +171,7 @@ def complete_lesson(request, pk):
     progress, created = LessonProgress.objects.get_or_create(
         user=request.user,
         lesson=lesson,
-        defaults={"completed": True}
+        defaults={"completed": True},
     )
 
     if not created and not progress.completed:
@@ -181,7 +192,7 @@ def continue_course(request, pk):
 
     is_enrolled = Enrollment.objects.filter(
         user=request.user,
-        course=course
+        course=course,
     ).exists()
 
     if not is_enrolled:
@@ -190,14 +201,19 @@ def continue_course(request, pk):
     progress = build_course_progress(request.user, course)
 
     if progress["next_lesson"]:
-        return redirect("courses:lesson_detail", pk=progress["next_lesson"].pk)
+        return redirect(
+            "courses:lesson_detail",
+            pk=progress["next_lesson"].pk,
+        )
 
     return redirect("courses:course_certificate", pk=course.pk)
 
 
 @login_required
 def my_courses(request):
-    enrollments = Enrollment.objects.filter(user=request.user).select_related("course")
+    enrollments = Enrollment.objects.filter(
+        user=request.user,
+    ).select_related("course")
     enrolled_courses = [enrollment.course for enrollment in enrollments]
 
     my_courses_data = []
@@ -226,7 +242,7 @@ def course_certificate(request, pk):
 
     is_enrolled = Enrollment.objects.filter(
         user=request.user,
-        course=course
+        course=course,
     ).exists()
 
     if not is_enrolled:

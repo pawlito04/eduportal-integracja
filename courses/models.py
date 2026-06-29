@@ -39,7 +39,10 @@ class Lesson(models.Model):
 
 
 class Enrollment(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+    )
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
 
     class Meta:
@@ -50,7 +53,10 @@ class Enrollment(models.Model):
 
 
 class LessonProgress(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+    )
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
     completed = models.BooleanField(default=False)
 
