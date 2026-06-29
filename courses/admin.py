@@ -1,4 +1,3 @@
-from django.contrib import admin
 from .models import Course, Module, Lesson, Enrollment, LessonProgress
 
 
@@ -25,3 +24,4 @@ class EnrollmentAdmin(admin.ModelAdmin):
 @admin.register(LessonProgress)
 class LessonProgressAdmin(admin.ModelAdmin):
     list_display = ("id", "user", "lesson", "completed")
+    
