@@ -27,7 +27,7 @@ jobs:
 
       - name: Run linter
         run: |
-          flake8 . --exclude=.venv,venv,__pycache__,migrations
+          flake8 . --exclude=.venv,venv,__pycache__,migrations --max-line-length=120
 
       - name: Run tests
         run: |
