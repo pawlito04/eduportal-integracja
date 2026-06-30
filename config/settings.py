@@ -13,16 +13,14 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 import os
 from pathlib import Path
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 SECRET_KEY = os.getenv(
     "SECRET_KEY",
     "django-insecure-48449%&7utp4n+v=+y&!la5y3k@9n0ehg+#7@lj@sx!k7*8_)8",
 )
 
-DEBUG = os.getenv("DEBUG", "True") == "True"
+DEBUG = os.getenv("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = os.getenv(
     "ALLOWED_HOSTS",
@@ -34,7 +32,6 @@ CSRF_TRUSTED_ORIGINS = os.getenv(
     "http://localhost:8000,http://127.0.0.1:8000,https://eduportal-integracja-1.onrender.com",
 ).split(",")
 
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -44,7 +41,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "courses",
 ]
-
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -56,9 +52,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-
 ROOT_URLCONF = "config.urls"
-
 
 TEMPLATES = [
     {
@@ -75,9 +69,7 @@ TEMPLATES = [
     },
 ]
 
-
 WSGI_APPLICATION = "config.wsgi.application"
-
 
 DATABASES = {
     "default": {
@@ -85,7 +77,6 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -102,26 +93,20 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 LANGUAGE_CODE = "pl-pl"
-
 TIME_ZONE = "Europe/Warsaw"
 
 USE_I18N = True
 USE_TZ = True
 
-
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
-
 
 SESSION_COOKIE_SECURE = not DEBUG
 CSRF_COOKIE_SECURE = not DEBUG
 SECURE_SSL_REDIRECT = not DEBUG
 
-
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
 
 LOGIN_URL = "/accounts/login/"
 LOGIN_REDIRECT_URL = "/"
