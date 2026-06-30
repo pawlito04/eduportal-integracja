@@ -260,4 +260,3 @@ def course_certificate(request, pk):
         "total_lessons": progress["total_lessons"],
     }
     return render(request, "courses/course_certificate.html", context)
-    
