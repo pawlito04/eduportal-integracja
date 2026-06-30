@@ -1,10 +1,15 @@
 # EduPortal Integracja
 
-Portal e-learningowy zbudowany w Django. Aplikacja umożliwia przeglądanie kursów, podział materiału na moduły i lekcje, zapisywanie użytkownika na kurs, śledzenie postępu nauki oraz podstawową obsługę kont użytkowników.[cite:3268]
+Portal e-learningowy zbudowany w Django. Aplikacja umożliwia przeglądanie kursów, podział materiału na moduły i lekcje, zapisywanie użytkownika na kurs, śledzenie postępu nauki oraz podstawową obsługę kont użytkowników.
+
+## Wersja live
+
+Aplikacja dostępna online:
+https://eduportal-integracja-1.onrender.com
 
 ## Opis projektu
 
-Projekt został przygotowany jako końcowy system w ramach przedmiotu Integracja Systemów Informatycznych. Założeniem było stworzenie kompletnej aplikacji webowej z wykorzystaniem nowoczesnych praktyk inżynierii oprogramowania: wersjonowania w GitHub, konteneryzacji Docker, konfiguracji przez zmienne środowiskowe oraz przygotowania pod CI/CD.[cite:3268]
+Projekt został przygotowany jako końcowy system w ramach przedmiotu Integracja Systemów Informatycznych. Celem było stworzenie kompletnej aplikacji webowej z wykorzystaniem nowoczesnych praktyk inżynierii oprogramowania, takich jak wersjonowanie w GitHub, konteneryzacja Docker, konfiguracja przez zmienne środowiskowe, automatyzacja CI oraz wdrożenie wersji live.
 
 Główne funkcjonalności:
 - przegląd listy kursów,
@@ -13,17 +18,18 @@ Główne funkcjonalności:
 - zapis użytkownika na kurs,
 - oznaczanie lekcji jako ukończonych,
 - śledzenie progresu użytkownika,
-- logowanie użytkownika.[cite:3268]
+- logowanie użytkownika.
 
 ## Stos technologiczny
 
 - Python
 - Django
-- SQLite (lokalnie)
+- SQLite
 - Docker
 - Docker Compose
 - Git + GitHub
-- GitHub Actions (CI)
+- GitHub Actions
+- Render
 
 ## Struktura projektu
 
@@ -32,6 +38,9 @@ eduportal-integracja/
 ├── config/
 ├── courses/
 ├── users/
+├── .github/
+│   └── workflows/
+│       └── ci.yml
 ├── Dockerfile
 ├── docker-compose.yml
 ├── requirements.txt
@@ -42,7 +51,7 @@ eduportal-integracja/
 
 ## Architektura aplikacji
 
-Aplikacja działa w architekturze webowej, gdzie użytkownik komunikuje się z backendem Django, a dane przechowywane są w bazie danych. W wersji lokalnej projekt może działać z SQLite, a w wersji kontenerowej może zostać podpięty do osobnego serwisu bazy danych zdefiniowanego w `docker-compose.yml`.[cite:3268]
+Aplikacja działa w architekturze webowej, gdzie użytkownik komunikuje się z backendem Django, a dane przechowywane są w bazie danych. W środowisku lokalnym projekt korzysta z SQLite, natomiast aplikacja została przygotowana do uruchamiania także w środowisku kontenerowym oraz do wdrożenia w chmurze.
 
 Przykładowy przepływ żądania:
 1. Użytkownik otwiera stronę w przeglądarce.
@@ -65,7 +74,7 @@ Relacje:
 - jeden `Course` ma wiele `Module`,
 - jeden `Module` ma wiele `Lesson`,
 - jeden `User` może mieć wiele `Enrollment`,
-- jeden `User` może mieć wiele rekordów `LessonProgress`.[cite:3268]
+- jeden `User` może mieć wiele rekordów `LessonProgress`.
 
 ## Uruchomienie lokalne
 
@@ -84,6 +93,12 @@ py -m venv .venv
 .venv\Scripts\activate
 ```
 
+Linux / macOS:
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
 ### 3. Instalacja zależności
 
 ```bash
@@ -94,11 +109,17 @@ pip install -r requirements.txt
 
 Skopiuj plik przykładowy:
 
+Windows:
 ```bash
 copy .env.example .env
 ```
 
-Następnie uzupełnij potrzebne wartości w `.env`.[cite:3268]
+Linux / macOS:
+```bash
+cp .env.example .env
+```
+
+Następnie uzupełnij wymagane wartości w `.env`.
 
 ### 5. Migracje
 
@@ -124,7 +145,7 @@ http://127.0.0.1:8000/
 docker-compose up --build
 ```
 
-Jeśli projekt wymaga migracji po starcie kontenerów, można wykonać:
+Jeśli po starcie kontenerów potrzebne są migracje:
 
 ```bash
 docker-compose exec web python manage.py migrate
@@ -132,22 +153,48 @@ docker-compose exec web python manage.py migrate
 
 ## CI/CD
 
-Projekt jest przygotowany pod automatyzację z użyciem GitHub Actions. Pipeline CI powinien uruchamiać się przy `push` i `pull request`, wykonywać instalację zależności, linter, testy oraz weryfikować poprawność budowania obrazu Dockera.[cite:3268]
+Projekt wykorzystuje GitHub Actions do automatycznej weryfikacji jakości kodu. Pipeline CI uruchamia się przy zmianach w repozytorium i obejmuje między innymi linter `flake8`, testy oraz weryfikację poprawności konfiguracji projektu.
+
+Wersja produkcyjna została wdrożona na platformie Render:
+https://eduportal-integracja-1.onrender.com
+
+## Deployment
+
+Aplikacja została wdrożona jako web service na platformie Render. Render automatycznie pobiera kod z repozytorium GitHub i wykonuje ponowny deploy po kolejnych zmianach na głównej gałęzi projektu.
+
+Przy wdrożeniu wykorzystano konfigurację środowiskową, w tym między innymi:
+- `SECRET_KEY`
+- `DEBUG`
+- `ALLOWED_HOSTS`
+
+Dla środowiska produkcyjnego aplikacja powinna mieć ustawione `DEBUG=False`, a `ALLOWED_HOSTS` powinno zawierać domenę usługi Render, np. `eduportal-integracja-1.onrender.com`.
 
 ## Bezpieczeństwo
 
-Wrażliwe dane, takie jak `SECRET_KEY`, hasła lub klucze API, nie powinny znajdować się bezpośrednio w repozytorium. Konfiguracja powinna być przekazywana przez zmienne środowiskowe lub systemy typu GitHub Secrets.[cite:3268]
+Wrażliwe dane, takie jak `SECRET_KEY`, hasła lub klucze API, nie powinny znajdować się bezpośrednio w repozytorium. Konfiguracja powinna być przekazywana przez zmienne środowiskowe lub mechanizmy sekretów dostępne w środowisku uruchomieniowym.
 
-## Status wymagań projektowych
+Do repozytorium nie powinny trafiać pliki takie jak:
+- `.env`
+- `db.sqlite3`
+- `__pycache__/`
+- pliki tymczasowe i artefakty środowiska lokalnego
+
+## Status projektu
 
 Zrealizowane elementy:
 - repozytorium GitHub,
 - aplikacja webowa w Django,
 - konteneryzacja przez Docker i Docker Compose,
 - konfiguracja przez `.env.example`,
-- przygotowanie pod CI.[cite:3268]
+- pipeline CI w GitHub Actions,
+- wdrożenie wersji live na Render.
 
-Do pełnego domknięcia projektu można dodatkowo uzupełnić:
-- wdrożenie wersji live,
-- pełny pipeline CI/CD,
-- rozszerzone testy i pomiar coverage.[cite:3268]
+Możliwe dalsze rozszerzenia:
+- rozbudowa testów i pomiar coverage,
+- wdrożenie pełnego CD sterowanego po sukcesie CI,
+- podpięcie zewnętrznej bazy PostgreSQL,
+- rozszerzenie modułu użytkowników i panelu administracyjnego.
+
+## Autor
+
+Projekt przygotowany w ramach przedmiotu Integracja Systemów Informatycznych.
