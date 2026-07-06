@@ -4,7 +4,7 @@
   "pk": 1,
   "fields": {
     "title": "Python podstawy",
-    "description": "Kurs wprowadzaj¹cy do jêzyka Python dla osób pocz¹tkuj¹cych.",
+    "description": "Kurs wprowadzajï¿½cy do jï¿½zyka Python dla osï¿½b poczï¿½tkujï¿½cych.",
     "level": "beginner"
   }
 },
@@ -22,7 +22,7 @@
   "pk": 3,
   "fields": {
     "title": "Bazy danych i SQL",
-    "description": "Kurs pokazuj¹cy podstawy relacyjnych baz danych, SQL i pracy z danymi.",
+    "description": "Kurs pokazujï¿½cy podstawy relacyjnych baz danych, SQL i pracy z danymi.",
     "level": "beginner"
   }
 },
@@ -31,7 +31,7 @@
   "pk": 4,
   "fields": {
     "title": "Tworzenie aplikacji webowych",
-    "description": "Praktyczny kurs ³¹cz¹cy HTML, CSS, logikê backendu i wdra¿anie prostych aplikacji.",
+    "description": "Praktyczny kurs ï¿½ï¿½czï¿½cy HTML, CSS, logikï¿½ backendu i wdraï¿½anie prostych aplikacji.",
     "level": "advanced"
   }
 },
@@ -40,7 +40,7 @@
   "pk": 5,
   "fields": {
     "title": "Git i GitHub",
-    "description": "Nauka pracy z repozytorium, commitami, branchami i publikacj¹ kodu na GitHubie.",
+    "description": "Nauka pracy z repozytorium, commitami, branchami i publikacjï¿½ kodu na GitHubie.",
     "level": "beginner"
   }
 },
@@ -49,7 +49,7 @@
   "pk": 6,
   "fields": {
     "title": "HTML i CSS od zera",
-    "description": "Podstawy tworzenia stron internetowych z u¿yciem HTML i CSS.",
+    "description": "Podstawy tworzenia stron internetowych z uï¿½yciem HTML i CSS.",
     "level": "beginner"
   }
 },
@@ -75,8 +75,8 @@
   "model": "courses.course",
   "pk": 9,
   "fields": {
-    "title": "Docker dla pocz¹tkuj¹cych",
-    "description": "Podstawy konteneryzacji aplikacji z u¿yciem Dockera.",
+    "title": "Docker dla poczï¿½tkujï¿½cych",
+    "description": "Podstawy konteneryzacji aplikacji z uï¿½yciem Dockera.",
     "level": "intermediate"
   }
 },
@@ -133,7 +133,7 @@
   "pk": 7,
   "fields": {
     "course": 3,
-    "title": "£¹czenie tabel i praktyka"
+    "title": "ï¿½ï¿½czenie tabel i praktyka"
   }
 },
 {
@@ -213,7 +213,7 @@
   "pk": 17,
   "fields": {
     "course": 6,
-    "title": "Uk³ad strony"
+    "title": "Ukï¿½ad strony"
   }
 },
 {
@@ -294,7 +294,7 @@
   "fields": {
     "module": 1,
     "title": "Czym jest Python?",
-    "content": "Python to popularny jêzyk programowania u¿ywany do tworzenia aplikacji, analizy danych i automatyzacji."
+    "content": "Python to popularny jï¿½zyk programowania uï¿½ywany do tworzenia aplikacji, analizy danych i automatyzacji."
   }
 },
 {
@@ -302,8 +302,8 @@
   "pk": 3,
   "fields": {
     "module": 1,
-    "title": "Instalacja œrodowiska",
-    "content": "W tej lekcji omawiamy instalacjê Pythona i uruchamianie pierwszego programu."
+    "title": "Instalacja ï¿½rodowiska",
+    "content": "W tej lekcji omawiamy instalacjï¿½ Pythona i uruchamianie pierwszego programu."
   }
 },
 {
@@ -312,7 +312,7 @@
   "fields": {
     "module": 2,
     "title": "Co to jest Django?",
-    "content": "Wprowadzenie do frameworka Django i jego zastosowañ przy budowie aplikacji webowych."
+    "content": "Wprowadzenie do frameworka Django i jego zastosowaï¿½ przy budowie aplikacji webowych."
   }
 },
 {
@@ -321,7 +321,7 @@
   "fields": {
     "module": 2,
     "title": "Struktura projektu",
-    "content": "Poznasz pliki projektu Django, aplikacje i rolê settings.py, urls.py oraz manage.py."
+    "content": "Poznasz pliki projektu Django, aplikacje i rolï¿½ settings.py, urls.py oraz manage.py."
   }
 },
 {
@@ -330,7 +330,7 @@
   "fields": {
     "module": 2,
     "title": "Pierwsza aplikacja",
-    "content": "Tworzymy now¹ aplikacjê Django i pod³¹czamy j¹ do projektu."
+    "content": "Tworzymy nowï¿½ aplikacjï¿½ Django i podï¿½ï¿½czamy jï¿½ do projektu."
   }
 },
 {
@@ -339,7 +339,7 @@
   "fields": {
     "module": 3,
     "title": "Modele danych",
-    "content": "Nauczysz siê tworzyæ modele reprezentuj¹ce dane w bazie."
+    "content": "Nauczysz siï¿½ tworzyï¿½ modele reprezentujï¿½ce dane w bazie."
   }
 },
 {
@@ -348,7 +348,7 @@
   "fields": {
     "module": 3,
     "title": "Migracje",
-    "content": "Omówienie makemigrations i migrate oraz aktualizacji schematu bazy."
+    "content": "Omï¿½wienie makemigrations i migrate oraz aktualizacji schematu bazy."
   }
 },
 {
@@ -357,7 +357,7 @@
   "fields": {
     "module": 3,
     "title": "Panel admina",
-    "content": "Poznasz mo¿liwoœci panelu administracyjnego Django i zarz¹dzania danymi."
+    "content": "Poznasz moï¿½liwoï¿½ci panelu administracyjnego Django i zarzï¿½dzania danymi."
   }
 },
 {
@@ -375,7 +375,7 @@
   "fields": {
     "module": 4,
     "title": "Szablony HTML",
-    "content": "Dowiesz siê, jak dzia³a renderowanie szablonów i dziedziczenie base.html."
+    "content": "Dowiesz siï¿½, jak dziaï¿½a renderowanie szablonï¿½w i dziedziczenie base.html."
   }
 },
 {
@@ -384,7 +384,7 @@
   "fields": {
     "module": 4,
     "title": "Routing URL",
-    "content": "£¹czenie widoków z adresami URL i u¿ywanie nazwanych œcie¿ek."
+    "content": "ï¿½ï¿½czenie widokï¿½w z adresami URL i uï¿½ywanie nazwanych ï¿½cieï¿½ek."
   }
 },
 {
@@ -393,7 +393,7 @@
   "fields": {
     "module": 5,
     "title": "Czym jest baza danych?",
-    "content": "Podstawy baz danych, rekordów, tabel i relacji."
+    "content": "Podstawy baz danych, rekordï¿½w, tabel i relacji."
   }
 },
 {
@@ -402,7 +402,7 @@
   "fields": {
     "module": 5,
     "title": "Tabele i rekordy",
-    "content": "Jak organizowaæ dane w tabelach i interpretowaæ rekordy."
+    "content": "Jak organizowaï¿½ dane w tabelach i interpretowaï¿½ rekordy."
   }
 },
 {
@@ -410,8 +410,8 @@
   "pk": 16,
   "fields": {
     "module": 5,
-    "title": "Klucze g³ówne i obce",
-    "content": "Poznasz podstawy relacji miêdzy tabelami przy u¿yciu kluczy."
+    "title": "Klucze gï¿½ï¿½wne i obce",
+    "content": "Poznasz podstawy relacji miï¿½dzy tabelami przy uï¿½yciu kluczy."
   }
 },
 {
@@ -420,7 +420,7 @@
   "fields": {
     "module": 6,
     "title": "SELECT i WHERE",
-    "content": "Pobieranie danych z tabel i filtrowanie wyników."
+    "content": "Pobieranie danych z tabel i filtrowanie wynikï¿½w."
   }
 },
 {
@@ -429,7 +429,7 @@
   "fields": {
     "module": 6,
     "title": "ORDER BY i GROUP BY",
-    "content": "Sortowanie danych i podstawowe grupowanie wyników."
+    "content": "Sortowanie danych i podstawowe grupowanie wynikï¿½w."
   }
 },
 {
@@ -438,7 +438,7 @@
   "fields": {
     "module": 6,
     "title": "INSERT UPDATE DELETE",
-    "content": "Dodawanie, aktualizacja i usuwanie rekordów w SQL."
+    "content": "Dodawanie, aktualizacja i usuwanie rekordï¿½w w SQL."
   }
 },
 {
@@ -447,7 +447,7 @@
   "fields": {
     "module": 7,
     "title": "JOIN",
-    "content": "W tej lekcji omówimy ³¹czenie danych z wielu tabel."
+    "content": "W tej lekcji omï¿½wimy ï¿½ï¿½czenie danych z wielu tabel."
   }
 },
 {
@@ -456,7 +456,7 @@
   "fields": {
     "module": 7,
     "title": "Praktyczne zapytania",
-    "content": "Przyk³ady praktycznych zapytañ do bazy danych w codziennej pracy."
+    "content": "Przykï¿½ady praktycznych zapytaï¿½ do bazy danych w codziennej pracy."
   }
 },
 {
@@ -464,8 +464,8 @@
   "pk": 22,
   "fields": {
     "module": 7,
-    "title": "Najczêstsze b³êdy SQL",
-    "content": "B³êdy pocz¹tkuj¹cych i sposoby ich diagnozowania."
+    "title": "Najczï¿½stsze bï¿½ï¿½dy SQL",
+    "content": "Bï¿½ï¿½dy poczï¿½tkujï¿½cych i sposoby ich diagnozowania."
   }
 },
 {
@@ -474,7 +474,7 @@
   "fields": {
     "module": 8,
     "title": "HTML w praktyce",
-    "content": "Budowa struktury strony z u¿yciem podstawowych znaczników HTML."
+    "content": "Budowa struktury strony z uï¿½yciem podstawowych znacznikï¿½w HTML."
   }
 },
 {
@@ -483,7 +483,7 @@
   "fields": {
     "module": 8,
     "title": "Stylowanie CSS",
-    "content": "Wprowadzenie do stylów, klas, kolorów, odstêpów i prostego layoutu."
+    "content": "Wprowadzenie do stylï¿½w, klas, kolorï¿½w, odstï¿½pï¿½w i prostego layoutu."
   }
 },
 {
@@ -491,8 +491,8 @@
   "pk": 25,
   "fields": {
     "module": 8,
-    "title": "Responsywnoœæ",
-    "content": "Dostosowanie wygl¹du strony do ekranów mobilnych i desktopowych."
+    "title": "Responsywnoï¿½ï¿½",
+    "content": "Dostosowanie wyglï¿½du strony do ekranï¿½w mobilnych i desktopowych."
   }
 },
 {
@@ -500,8 +500,8 @@
   "pk": 26,
   "fields": {
     "module": 9,
-    "title": "Obs³uga formularzy",
-    "content": "Poznasz wysy³anie danych z formularza i odbieranie ich po stronie serwera."
+    "title": "Obsï¿½uga formularzy",
+    "content": "Poznasz wysyï¿½anie danych z formularza i odbieranie ich po stronie serwera."
   }
 },
 {
@@ -510,7 +510,7 @@
   "fields": {
     "module": 9,
     "title": "Logika aplikacji",
-    "content": "Tworzenie prostych regu³ dzia³ania aplikacji i przetwarzanie danych."
+    "content": "Tworzenie prostych reguï¿½ dziaï¿½ania aplikacji i przetwarzanie danych."
   }
 },
 {
@@ -518,8 +518,8 @@
   "pk": 28,
   "fields": {
     "module": 9,
-    "title": "Autoryzacja u¿ytkownika",
-    "content": "Omówienie logowania, wylogowania i ograniczania dostêpu do zasobów."
+    "title": "Autoryzacja uï¿½ytkownika",
+    "content": "Omï¿½wienie logowania, wylogowania i ograniczania dostï¿½pu do zasobï¿½w."
   }
 },
 {
@@ -528,7 +528,7 @@
   "fields": {
     "module": 10,
     "title": "Przygotowanie projektu",
-    "content": "Porz¹dkowanie aplikacji przed publikacj¹ i testowaniem."
+    "content": "Porzï¿½dkowanie aplikacji przed publikacjï¿½ i testowaniem."
   }
 },
 {
@@ -536,8 +536,8 @@
   "pk": 30,
   "fields": {
     "module": 10,
-    "title": "Podstawy wdro¿enia",
-    "content": "Co trzeba przygotowaæ, aby aplikacjê uruchomiæ poza lokalnym œrodowiskiem."
+    "title": "Podstawy wdroï¿½enia",
+    "content": "Co trzeba przygotowaï¿½, aby aplikacjï¿½ uruchomiï¿½ poza lokalnym ï¿½rodowiskiem."
   }
 },
 {
@@ -545,8 +545,8 @@
   "pk": 31,
   "fields": {
     "module": 10,
-    "title": "Utrzymanie i rozwój",
-    "content": "Dalsza rozbudowa projektu, poprawki i organizacja pracy po wdro¿eniu."
+    "title": "Utrzymanie i rozwï¿½j",
+    "content": "Dalsza rozbudowa projektu, poprawki i organizacja pracy po wdroï¿½eniu."
   }
 },
 {
@@ -555,7 +555,7 @@
   "fields": {
     "module": 11,
     "title": "Instalacja Pythona",
-    "content": "Jak zainstalowaæ Pythona i przygotowaæ œrodowisko pracy."
+    "content": "Jak zainstalowaï¿½ Pythona i przygotowaï¿½ ï¿½rodowisko pracy."
   }
 },
 {
@@ -573,7 +573,7 @@
   "fields": {
     "module": 12,
     "title": "Instalacja Gita",
-    "content": "Instalacja Gita i sprawdzenie poprawnoœci konfiguracji."
+    "content": "Instalacja Gita i sprawdzenie poprawnoï¿½ci konfiguracji."
   }
 },
 {
@@ -591,7 +591,7 @@
   "fields": {
     "module": 12,
     "title": "Commit i historia zmian",
-    "content": "Zapisywanie zmian i przegl¹d historii projektu."
+    "content": "Zapisywanie zmian i przeglï¿½d historii projektu."
   }
 },
 {
@@ -600,7 +600,7 @@
   "fields": {
     "module": 13,
     "title": "Tworzenie branchy",
-    "content": "Jak tworzyæ osobne ga³êzie do nowych funkcji."
+    "content": "Jak tworzyï¿½ osobne gaï¿½ï¿½zie do nowych funkcji."
   }
 },
 {
@@ -609,7 +609,7 @@
   "fields": {
     "module": 13,
     "title": "Merge branchy",
-    "content": "£¹czenie zmian z ró¿nych ga³êzi projektu."
+    "content": "ï¿½ï¿½czenie zmian z rï¿½nych gaï¿½ï¿½zi projektu."
   }
 },
 {
@@ -617,8 +617,8 @@
   "pk": 39,
   "fields": {
     "module": 13,
-    "title": "Rozwi¹zywanie konfliktów",
-    "content": "Podstawy naprawy konfliktów podczas scalania."
+    "title": "Rozwiï¿½zywanie konfliktï¿½w",
+    "content": "Podstawy naprawy konfliktï¿½w podczas scalania."
   }
 },
 {
@@ -627,7 +627,7 @@
   "fields": {
     "module": 14,
     "title": "Push do GitHuba",
-    "content": "Wysy³anie lokalnego repozytorium na GitHuba."
+    "content": "Wysyï¿½anie lokalnego repozytorium na GitHuba."
   }
 },
 {
@@ -636,7 +636,7 @@
   "fields": {
     "module": 14,
     "title": "Pull request",
-    "content": "Wspó³praca przez pull requesty i code review."
+    "content": "Wspï¿½praca przez pull requesty i code review."
   }
 },
 {
@@ -654,7 +654,7 @@
   "fields": {
     "module": 15,
     "title": "Struktura dokumentu HTML",
-    "content": "Poznasz podstawowe znaczniki i uk³ad dokumentu HTML."
+    "content": "Poznasz podstawowe znaczniki i ukï¿½ad dokumentu HTML."
   }
 },
 {
@@ -662,8 +662,8 @@
   "pk": 44,
   "fields": {
     "module": 15,
-    "title": "Nag³ówki, akapity i linki",
-    "content": "Tworzenie podstawowych elementów treœci w HTML."
+    "title": "Nagï¿½ï¿½wki, akapity i linki",
+    "content": "Tworzenie podstawowych elementï¿½w treï¿½ci w HTML."
   }
 },
 {
@@ -672,7 +672,7 @@
   "fields": {
     "module": 15,
     "title": "Listy i obrazy",
-    "content": "Dodawanie list oraz obrazów do strony."
+    "content": "Dodawanie list oraz obrazï¿½w do strony."
   }
 },
 {
@@ -681,7 +681,7 @@
   "fields": {
     "module": 16,
     "title": "Selektory CSS",
-    "content": "Podstawowe sposoby stylowania elementów strony."
+    "content": "Podstawowe sposoby stylowania elementï¿½w strony."
   }
 },
 {
@@ -690,7 +690,7 @@
   "fields": {
     "module": 16,
     "title": "Kolory i czcionki",
-    "content": "Zmiana kolorów, t³a i wygl¹du tekstu."
+    "content": "Zmiana kolorï¿½w, tï¿½a i wyglï¿½du tekstu."
   }
 },
 {
@@ -699,7 +699,7 @@
   "fields": {
     "module": 16,
     "title": "Margin, padding, border",
-    "content": "Model pude³kowy i odstêpy w CSS."
+    "content": "Model pudeï¿½kowy i odstï¿½py w CSS."
   }
 },
 {
@@ -708,7 +708,7 @@
   "fields": {
     "module": 17,
     "title": "Flexbox",
-    "content": "Nowoczesne uk³adanie elementów w jednym wymiarze."
+    "content": "Nowoczesne ukï¿½adanie elementï¿½w w jednym wymiarze."
   }
 },
 {
@@ -717,7 +717,7 @@
   "fields": {
     "module": 17,
     "title": "Grid",
-    "content": "Tworzenie bardziej z³o¿onych layoutów przy u¿yciu CSS Grid."
+    "content": "Tworzenie bardziej zï¿½oï¿½onych layoutï¿½w przy uï¿½yciu CSS Grid."
   }
 },
 {
@@ -725,8 +725,8 @@
   "pk": 51,
   "fields": {
     "module": 17,
-    "title": "Responsywnoœæ",
-    "content": "Dostosowanie strony do ró¿nych urz¹dzeñ."
+    "title": "Responsywnoï¿½ï¿½",
+    "content": "Dostosowanie strony do rï¿½nych urzï¿½dzeï¿½."
   }
 },
 {
@@ -752,8 +752,8 @@
   "pk": 54,
   "fields": {
     "module": 18,
-    "title": "Pêtle",
-    "content": "Powtarzanie operacji z u¿yciem pêtli."
+    "title": "Pï¿½tle",
+    "content": "Powtarzanie operacji z uï¿½yciem pï¿½tli."
   }
 },
 {
@@ -762,7 +762,7 @@
   "fields": {
     "module": 19,
     "title": "Funkcje",
-    "content": "Tworzenie i wywo³ywanie funkcji."
+    "content": "Tworzenie i wywoï¿½ywanie funkcji."
   }
 },
 {
@@ -771,7 +771,7 @@
   "fields": {
     "module": 19,
     "title": "Manipulacja DOM",
-    "content": "Zmiana zawartoœci strony przy u¿yciu JavaScript."
+    "content": "Zmiana zawartoï¿½ci strony przy uï¿½yciu JavaScript."
   }
 },
 {
@@ -779,8 +779,8 @@
   "pk": 57,
   "fields": {
     "module": 19,
-    "title": "Obs³uga zdarzeñ",
-    "content": "Klikniêcia, formularze i reakcja na akcje u¿ytkownika."
+    "title": "Obsï¿½uga zdarzeï¿½",
+    "content": "Klikniï¿½cia, formularze i reakcja na akcje uï¿½ytkownika."
   }
 },
 {
@@ -789,7 +789,7 @@
   "fields": {
     "module": 20,
     "title": "Prosty kalkulator",
-    "content": "Æwiczenie praktyczne z logik¹ i interfejsem."
+    "content": "ï¿½wiczenie praktyczne z logikï¿½ i interfejsem."
   }
 },
 {
@@ -797,8 +797,8 @@
   "pk": 59,
   "fields": {
     "module": 20,
-    "title": "Lista zadañ",
-    "content": "Budowa ma³ej aplikacji TODO."
+    "title": "Lista zadaï¿½",
+    "content": "Budowa maï¿½ej aplikacji TODO."
   }
 },
 {
@@ -807,7 +807,7 @@
   "fields": {
     "module": 20,
     "title": "Walidacja formularza",
-    "content": "Sprawdzanie poprawnoœci danych w formularzu."
+    "content": "Sprawdzanie poprawnoï¿½ci danych w formularzu."
   }
 },
 {
@@ -816,7 +816,7 @@
   "fields": {
     "module": 21,
     "title": "Czym jest REST API",
-    "content": "Poznasz podstawowe za³o¿enia REST i komunikacji klient-serwer."
+    "content": "Poznasz podstawowe zaï¿½oï¿½enia REST i komunikacji klient-serwer."
   }
 },
 {
@@ -834,7 +834,7 @@
   "fields": {
     "module": 21,
     "title": "Pierwszy endpoint",
-    "content": "Tworzenie pierwszego widoku API zwracaj¹cego dane."
+    "content": "Tworzenie pierwszego widoku API zwracajï¿½cego dane."
   }
 },
 {
@@ -843,7 +843,7 @@
   "fields": {
     "module": 22,
     "title": "Serializery",
-    "content": "Konwersja danych modeli na JSON i walidacja danych wejœciowych."
+    "content": "Konwersja danych modeli na JSON i walidacja danych wejï¿½ciowych."
   }
 },
 {
@@ -852,7 +852,7 @@
   "fields": {
     "module": 22,
     "title": "APIView i generics",
-    "content": "Budowa endpointów przy u¿yciu klas DRF."
+    "content": "Budowa endpointï¿½w przy uï¿½yciu klas DRF."
   }
 },
 {
@@ -861,7 +861,7 @@
   "fields": {
     "module": 22,
     "title": "CRUD API",
-    "content": "Tworzenie pe³nych endpointów do dodawania, edycji i usuwania danych."
+    "content": "Tworzenie peï¿½nych endpointï¿½w do dodawania, edycji i usuwania danych."
   }
 },
 {
@@ -870,7 +870,7 @@
   "fields": {
     "module": 23,
     "title": "Permission classes",
-    "content": "Ograniczanie dostêpu do endpointów."
+    "content": "Ograniczanie dostï¿½pu do endpointï¿½w."
   }
 },
 {
@@ -888,7 +888,7 @@
   "fields": {
     "module": 23,
     "title": "Testowanie API",
-    "content": "Pisanie prostych testów dla endpointów REST."
+    "content": "Pisanie prostych testï¿½w dla endpointï¿½w REST."
   }
 },
 {
@@ -897,7 +897,7 @@
   "fields": {
     "module": 24,
     "title": "Czym jest Docker",
-    "content": "Wprowadzenie do kontenerów i ich zastosowañ."
+    "content": "Wprowadzenie do kontenerï¿½w i ich zastosowaï¿½."
   }
 },
 {
@@ -906,7 +906,7 @@
   "fields": {
     "module": 24,
     "title": "Instalacja Dockera",
-    "content": "Instalacja Dockera i sprawdzenie dzia³ania œrodowiska."
+    "content": "Instalacja Dockera i sprawdzenie dziaï¿½ania ï¿½rodowiska."
   }
 },
 {
@@ -924,7 +924,7 @@
   "fields": {
     "module": 25,
     "title": "Budowanie obrazu",
-    "content": "Tworzenie w³asnego obrazu aplikacji."
+    "content": "Tworzenie wï¿½asnego obrazu aplikacji."
   }
 },
 {
@@ -942,7 +942,7 @@
   "fields": {
     "module": 25,
     "title": "Tagowanie i wersje",
-    "content": "Zarz¹dzanie wersjami obrazów."
+    "content": "Zarzï¿½dzanie wersjami obrazï¿½w."
   }
 },
 {
@@ -951,7 +951,7 @@
   "fields": {
     "module": 26,
     "title": "Compose basics",
-    "content": "£¹czenie kilku us³ug w jednym œrodowisku."
+    "content": "ï¿½ï¿½czenie kilku usï¿½ug w jednym ï¿½rodowisku."
   }
 },
 {
@@ -960,7 +960,7 @@
   "fields": {
     "module": 26,
     "title": "Aplikacja + baza danych",
-    "content": "Uruchamianie aplikacji wraz z baz¹ danych w Docker Compose."
+    "content": "Uruchamianie aplikacji wraz z bazï¿½ danych w Docker Compose."
   }
 },
 {
