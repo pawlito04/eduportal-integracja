@@ -1,975 +1,975 @@
 [
-{
-  "model": "courses.course",
-  "pk": 1,
-  "fields": {
-    "title": "Python podstawy",
-    "description": "Kurs wprowadzaj�cy do j�zyka Python dla os�b pocz�tkuj�cych.",
-    "level": "beginner"
+  {
+    "model": "courses.course",
+    "pk": 1,
+    "fields": {
+      "title": "Python podstawy",
+      "description": "Kurs wprowadzający do języka Python dla osób początkujących.",
+      "level": "beginner"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 2,
+    "fields": {
+      "title": "Django od podstaw",
+      "description": "Poznaj podstawy frameworka Django: projekt, aplikacje, modele, widoki, szablony i routing.",
+      "level": "intermediate"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 3,
+    "fields": {
+      "title": "Bazy danych i SQL",
+      "description": "Kurs pokazujący podstawy relacyjnych baz danych, SQL i pracy z danymi.",
+      "level": "beginner"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 4,
+    "fields": {
+      "title": "Tworzenie aplikacji webowych",
+      "description": "Praktyczny kurs łączący HTML, CSS, logikę backendu i wdrażanie prostych aplikacji.",
+      "level": "advanced"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 5,
+    "fields": {
+      "title": "Git i GitHub",
+      "description": "Nauka pracy z repozytorium, commitami, branchami i publikacją kodu na GitHubie.",
+      "level": "beginner"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 6,
+    "fields": {
+      "title": "HTML i CSS od zera",
+      "description": "Podstawy tworzenia stron internetowych z użyciem HTML i CSS.",
+      "level": "beginner"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 7,
+    "fields": {
+      "title": "JavaScript podstawy",
+      "description": "Wprowadzenie do JavaScriptu i interakcji na stronach internetowych.",
+      "level": "intermediate"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 8,
+    "fields": {
+      "title": "Django REST Framework",
+      "description": "Tworzenie prostych API w Django REST Framework krok po kroku.",
+      "level": "advanced"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 9,
+    "fields": {
+      "title": "Docker dla początkujących",
+      "description": "Podstawy konteneryzacji aplikacji z użyciem Dockera.",
+      "level": "intermediate"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 1,
+    "fields": {
+      "course": 1,
+      "title": "Wprowadzenie"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 2,
+    "fields": {
+      "course": 2,
+      "title": "Wprowadzenie do Django"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 3,
+    "fields": {
+      "course": 2,
+      "title": "Modele i baza danych"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 4,
+    "fields": {
+      "course": 2,
+      "title": "Widoki i szablony"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 5,
+    "fields": {
+      "course": 3,
+      "title": "Podstawy baz danych"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 6,
+    "fields": {
+      "course": 3,
+      "title": "Zapytania SQL"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 7,
+    "fields": {
+      "course": 3,
+      "title": "Łączenie tabel i praktyka"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 8,
+    "fields": {
+      "course": 4,
+      "title": "Frontend aplikacji"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 9,
+    "fields": {
+      "course": 4,
+      "title": "Backend aplikacji"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 10,
+    "fields": {
+      "course": 4,
+      "title": "Publikacja projektu"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 11,
+    "fields": {
+      "course": 1,
+      "title": "Wprowadzenie do Pythona"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 12,
+    "fields": {
+      "course": 5,
+      "title": "Podstawy Gita"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 13,
+    "fields": {
+      "course": 5,
+      "title": "Praca na branchach"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 14,
+    "fields": {
+      "course": 5,
+      "title": "GitHub w praktyce"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 15,
+    "fields": {
+      "course": 6,
+      "title": "HTML podstawy"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 16,
+    "fields": {
+      "course": 6,
+      "title": "CSS podstawy"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 17,
+    "fields": {
+      "course": 6,
+      "title": "Układ strony"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 18,
+    "fields": {
+      "course": 7,
+      "title": "Start z JavaScriptem"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 19,
+    "fields": {
+      "course": 7,
+      "title": "Funkcje i DOM"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 20,
+    "fields": {
+      "course": 7,
+      "title": "Praktyka"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 21,
+    "fields": {
+      "course": 8,
+      "title": "Podstawy API"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 22,
+    "fields": {
+      "course": 8,
+      "title": "Serializery i widoki"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 23,
+    "fields": {
+      "course": 8,
+      "title": "Autoryzacja i testy"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 24,
+    "fields": {
+      "course": 9,
+      "title": "Wprowadzenie do Dockera"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 25,
+    "fields": {
+      "course": 9,
+      "title": "Obrazy i Dockerfile"
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 26,
+    "fields": {
+      "course": 9,
+      "title": "Docker Compose"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 2,
+    "fields": {
+      "module": 1,
+      "title": "Czym jest Python?",
+      "content": "Python to popularny język programowania używany do tworzenia aplikacji, analizy danych i automatyzacji."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 3,
+    "fields": {
+      "module": 1,
+      "title": "Instalacja środowiska",
+      "content": "W tej lekcji omawiamy instalację Pythona i uruchamianie pierwszego programu."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 5,
+    "fields": {
+      "module": 2,
+      "title": "Co to jest Django?",
+      "content": "Wprowadzenie do frameworka Django i jego zastosowań przy budowie aplikacji webowych."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 6,
+    "fields": {
+      "module": 2,
+      "title": "Struktura projektu",
+      "content": "Poznasz pliki projektu Django, aplikacje i rolę settings.py, urls.py oraz manage.py."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 7,
+    "fields": {
+      "module": 2,
+      "title": "Pierwsza aplikacja",
+      "content": "Tworzymy nową aplikację Django i podłączamy ją do projektu."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 8,
+    "fields": {
+      "module": 3,
+      "title": "Modele danych",
+      "content": "Nauczysz się tworzyć modele reprezentujące dane w bazie."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 9,
+    "fields": {
+      "module": 3,
+      "title": "Migracje",
+      "content": "Omówienie makemigrations i migrate oraz aktualizacji schematu bazy."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 10,
+    "fields": {
+      "module": 3,
+      "title": "Panel admina",
+      "content": "Poznasz możliwości panelu administracyjnego Django i zarządzania danymi."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 11,
+    "fields": {
+      "module": 4,
+      "title": "Widoki funkcyjne",
+      "content": "Tworzymy pierwsze widoki i zwracamy odpowiedzi HTML."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 12,
+    "fields": {
+      "module": 4,
+      "title": "Szablony HTML",
+      "content": "Dowiesz się, jak działa renderowanie szablonów i dziedziczenie base.html."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 13,
+    "fields": {
+      "module": 4,
+      "title": "Routing URL",
+      "content": "Łączenie widoków z adresami URL i używanie nazwanych ścieżek."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 14,
+    "fields": {
+      "module": 5,
+      "title": "Czym jest baza danych?",
+      "content": "Podstawy baz danych, rekordów, tabel i relacji."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 15,
+    "fields": {
+      "module": 5,
+      "title": "Tabele i rekordy",
+      "content": "Jak organizować dane w tabelach i interpretować rekordy."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 16,
+    "fields": {
+      "module": 5,
+      "title": "Klucze główne i obce",
+      "content": "Poznasz podstawy relacji między tabelami przy użyciu kluczy."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 17,
+    "fields": {
+      "module": 6,
+      "title": "SELECT i WHERE",
+      "content": "Pobieranie danych z tabel i filtrowanie wyników."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 18,
+    "fields": {
+      "module": 6,
+      "title": "ORDER BY i GROUP BY",
+      "content": "Sortowanie danych i podstawowe grupowanie wyników."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 19,
+    "fields": {
+      "module": 6,
+      "title": "INSERT UPDATE DELETE",
+      "content": "Dodawanie, aktualizacja i usuwanie rekordów w SQL."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 20,
+    "fields": {
+      "module": 7,
+      "title": "JOIN",
+      "content": "W tej lekcji omówimy łączenie danych z wielu tabel."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 21,
+    "fields": {
+      "module": 7,
+      "title": "Praktyczne zapytania",
+      "content": "Przykłady praktycznych zapytań do bazy danych w codziennej pracy."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 22,
+    "fields": {
+      "module": 7,
+      "title": "Najczęstsze błędy SQL",
+      "content": "Błędy początkujących i sposoby ich diagnozowania."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 23,
+    "fields": {
+      "module": 8,
+      "title": "HTML w praktyce",
+      "content": "Budowa struktury strony z użyciem podstawowych znaczników HTML."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 24,
+    "fields": {
+      "module": 8,
+      "title": "Stylowanie CSS",
+      "content": "Wprowadzenie do stylów, klas, kolorów, odstępów i prostego layoutu."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 25,
+    "fields": {
+      "module": 8,
+      "title": "Responsywność",
+      "content": "Dostosowanie wyglądu strony do ekranów mobilnych i desktopowych."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 26,
+    "fields": {
+      "module": 9,
+      "title": "Obsługa formularzy",
+      "content": "Poznasz wysyłanie danych z formularza i odbieranie ich po stronie serwera."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 27,
+    "fields": {
+      "module": 9,
+      "title": "Logika aplikacji",
+      "content": "Tworzenie prostych reguł działania aplikacji i przetwarzanie danych."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 28,
+    "fields": {
+      "module": 9,
+      "title": "Autoryzacja użytkownika",
+      "content": "Omówienie logowania, wylogowania i ograniczania dostępu do zasobów."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 29,
+    "fields": {
+      "module": 10,
+      "title": "Przygotowanie projektu",
+      "content": "Porządkowanie aplikacji przed publikacją i testowaniem."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 30,
+    "fields": {
+      "module": 10,
+      "title": "Podstawy wdrożenia",
+      "content": "Co trzeba przygotować, aby aplikację uruchomić poza lokalnym środowiskiem."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 31,
+    "fields": {
+      "module": 10,
+      "title": "Utrzymanie i rozwój",
+      "content": "Dalsza rozbudowa projektu, poprawki i organizacja pracy po wdrożeniu."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 32,
+    "fields": {
+      "module": 11,
+      "title": "Instalacja Pythona",
+      "content": "Jak zainstalować Pythona i przygotować środowisko pracy."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 33,
+    "fields": {
+      "module": 11,
+      "title": "Zmienne i typy danych",
+      "content": "Podstawowe typy danych, zmienne i operacje w Pythonie."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 34,
+    "fields": {
+      "module": 12,
+      "title": "Instalacja Gita",
+      "content": "Instalacja Gita i sprawdzenie poprawności konfiguracji."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 35,
+    "fields": {
+      "module": 12,
+      "title": "Pierwsze repozytorium",
+      "content": "Tworzenie repozytorium i podstawowy workflow pracy."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 36,
+    "fields": {
+      "module": 12,
+      "title": "Commit i historia zmian",
+      "content": "Zapisywanie zmian i przegląd historii projektu."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 37,
+    "fields": {
+      "module": 13,
+      "title": "Tworzenie branchy",
+      "content": "Jak tworzyć osobne gałęzie do nowych funkcji."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 38,
+    "fields": {
+      "module": 13,
+      "title": "Merge branchy",
+      "content": "Łączenie zmian z różnych gałęzi projektu."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 39,
+    "fields": {
+      "module": 13,
+      "title": "Rozwiązywanie konfliktów",
+      "content": "Podstawy naprawy konfliktów podczas scalania."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 40,
+    "fields": {
+      "module": 14,
+      "title": "Push do GitHuba",
+      "content": "Wysyłanie lokalnego repozytorium na GitHuba."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 41,
+    "fields": {
+      "module": 14,
+      "title": "Pull request",
+      "content": "Współpraca przez pull requesty i code review."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 42,
+    "fields": {
+      "module": 14,
+      "title": "README projektu",
+      "content": "Tworzenie prostego i czytelnego README."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 43,
+    "fields": {
+      "module": 15,
+      "title": "Struktura dokumentu HTML",
+      "content": "Poznasz podstawowe znaczniki i układ dokumentu HTML."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 44,
+    "fields": {
+      "module": 15,
+      "title": "Nagłówki, akapity i linki",
+      "content": "Tworzenie podstawowych elementów treści w HTML."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 45,
+    "fields": {
+      "module": 15,
+      "title": "Listy i obrazy",
+      "content": "Dodawanie list oraz obrazów do strony."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 46,
+    "fields": {
+      "module": 16,
+      "title": "Selektory CSS",
+      "content": "Podstawowe sposoby stylowania elementów strony."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 47,
+    "fields": {
+      "module": 16,
+      "title": "Kolory i czcionki",
+      "content": "Zmiana kolorów, tła i wyglądu tekstu."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 48,
+    "fields": {
+      "module": 16,
+      "title": "Margin, padding, border",
+      "content": "Model pudełkowy i odstępy w CSS."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 49,
+    "fields": {
+      "module": 17,
+      "title": "Flexbox",
+      "content": "Nowoczesne układanie elementów w jednym wymiarze."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 50,
+    "fields": {
+      "module": 17,
+      "title": "Grid",
+      "content": "Tworzenie bardziej złożonych layoutów przy użyciu CSS Grid."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 51,
+    "fields": {
+      "module": 17,
+      "title": "Responsywność",
+      "content": "Dostosowanie strony do różnych urządzeń."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 52,
+    "fields": {
+      "module": 18,
+      "title": "Zmienne i typy",
+      "content": "Podstawowe typy danych i deklarowanie zmiennych w JavaScript."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 53,
+    "fields": {
+      "module": 18,
+      "title": "Operatory i warunki",
+      "content": "Instrukcje warunkowe i operatory logiczne."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 54,
+    "fields": {
+      "module": 18,
+      "title": "Pętle",
+      "content": "Powtarzanie operacji z użyciem pętli."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 55,
+    "fields": {
+      "module": 19,
+      "title": "Funkcje",
+      "content": "Tworzenie i wywoływanie funkcji."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 56,
+    "fields": {
+      "module": 19,
+      "title": "Manipulacja DOM",
+      "content": "Zmiana zawartości strony przy użyciu JavaScript."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 57,
+    "fields": {
+      "module": 19,
+      "title": "Obsługa zdarzeń",
+      "content": "Kliknięcia, formularze i reakcja na akcje użytkownika."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 58,
+    "fields": {
+      "module": 20,
+      "title": "Prosty kalkulator",
+      "content": "Ćwiczenie praktyczne z logiką i interfejsem."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 59,
+    "fields": {
+      "module": 20,
+      "title": "Lista zadań",
+      "content": "Budowa małej aplikacji TODO."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 60,
+    "fields": {
+      "module": 20,
+      "title": "Walidacja formularza",
+      "content": "Sprawdzanie poprawności danych w formularzu."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 61,
+    "fields": {
+      "module": 21,
+      "title": "Czym jest REST API",
+      "content": "Poznasz podstawowe założenia REST i komunikacji klient-serwer."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 62,
+    "fields": {
+      "module": 21,
+      "title": "Instalacja DRF",
+      "content": "Dodanie Django REST Framework do projektu i podstawowa konfiguracja."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 63,
+    "fields": {
+      "module": 21,
+      "title": "Pierwszy endpoint",
+      "content": "Tworzenie pierwszego widoku API zwracającego dane."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 64,
+    "fields": {
+      "module": 22,
+      "title": "Serializery",
+      "content": "Konwersja danych modeli na JSON i walidacja danych wejściowych."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 65,
+    "fields": {
+      "module": 22,
+      "title": "APIView i generics",
+      "content": "Budowa endpointów przy użyciu klas DRF."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 66,
+    "fields": {
+      "module": 22,
+      "title": "CRUD API",
+      "content": "Tworzenie pełnych endpointów do dodawania, edycji i usuwania danych."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 67,
+    "fields": {
+      "module": 23,
+      "title": "Permission classes",
+      "content": "Ograniczanie dostępu do endpointów."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 68,
+    "fields": {
+      "module": 23,
+      "title": "Token authentication",
+      "content": "Podstawy autoryzacji tokenowej."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 69,
+    "fields": {
+      "module": 23,
+      "title": "Testowanie API",
+      "content": "Pisanie prostych testów dla endpointów REST."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 70,
+    "fields": {
+      "module": 24,
+      "title": "Czym jest Docker",
+      "content": "Wprowadzenie do kontenerów i ich zastosowań."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 71,
+    "fields": {
+      "module": 24,
+      "title": "Instalacja Dockera",
+      "content": "Instalacja Dockera i sprawdzenie działania środowiska."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 72,
+    "fields": {
+      "module": 24,
+      "title": "Pierwszy kontener",
+      "content": "Uruchomienie pierwszego kontenera i zrozumienie podstawowych komend."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 73,
+    "fields": {
+      "module": 25,
+      "title": "Budowanie obrazu",
+      "content": "Tworzenie własnego obrazu aplikacji."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 74,
+    "fields": {
+      "module": 25,
+      "title": "Dockerfile",
+      "content": "Pisanie pliku Dockerfile krok po kroku."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 75,
+    "fields": {
+      "module": 25,
+      "title": "Tagowanie i wersje",
+      "content": "Zarządzanie wersjami obrazów."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 76,
+    "fields": {
+      "module": 26,
+      "title": "Compose basics",
+      "content": "Łączenie kilku usług w jednym środowisku."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 77,
+    "fields": {
+      "module": 26,
+      "title": "Aplikacja + baza danych",
+      "content": "Uruchamianie aplikacji wraz z bazą danych w Docker Compose."
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 78,
+    "fields": {
+      "module": 26,
+      "title": "Praca developerska",
+      "content": "Najwygodniejszy workflow lokalny z Dockerem."
+    }
   }
-},
-{
-  "model": "courses.course",
-  "pk": 2,
-  "fields": {
-    "title": "Django od podstaw",
-    "description": "Poznaj podstawy frameworka Django: projekt, aplikacje, modele, widoki, szablony i routing.",
-    "level": "intermediate"
-  }
-},
-{
-  "model": "courses.course",
-  "pk": 3,
-  "fields": {
-    "title": "Bazy danych i SQL",
-    "description": "Kurs pokazuj�cy podstawy relacyjnych baz danych, SQL i pracy z danymi.",
-    "level": "beginner"
-  }
-},
-{
-  "model": "courses.course",
-  "pk": 4,
-  "fields": {
-    "title": "Tworzenie aplikacji webowych",
-    "description": "Praktyczny kurs ��cz�cy HTML, CSS, logik� backendu i wdra�anie prostych aplikacji.",
-    "level": "advanced"
-  }
-},
-{
-  "model": "courses.course",
-  "pk": 5,
-  "fields": {
-    "title": "Git i GitHub",
-    "description": "Nauka pracy z repozytorium, commitami, branchami i publikacj� kodu na GitHubie.",
-    "level": "beginner"
-  }
-},
-{
-  "model": "courses.course",
-  "pk": 6,
-  "fields": {
-    "title": "HTML i CSS od zera",
-    "description": "Podstawy tworzenia stron internetowych z u�yciem HTML i CSS.",
-    "level": "beginner"
-  }
-},
-{
-  "model": "courses.course",
-  "pk": 7,
-  "fields": {
-    "title": "JavaScript podstawy",
-    "description": "Wprowadzenie do JavaScriptu i interakcji na stronach internetowych.",
-    "level": "intermediate"
-  }
-},
-{
-  "model": "courses.course",
-  "pk": 8,
-  "fields": {
-    "title": "Django REST Framework",
-    "description": "Tworzenie prostych API w Django REST Framework krok po kroku.",
-    "level": "advanced"
-  }
-},
-{
-  "model": "courses.course",
-  "pk": 9,
-  "fields": {
-    "title": "Docker dla pocz�tkuj�cych",
-    "description": "Podstawy konteneryzacji aplikacji z u�yciem Dockera.",
-    "level": "intermediate"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 1,
-  "fields": {
-    "course": 1,
-    "title": "Wprowadzenie"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 2,
-  "fields": {
-    "course": 2,
-    "title": "Wprowadzenie do Django"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 3,
-  "fields": {
-    "course": 2,
-    "title": "Modele i baza danych"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 4,
-  "fields": {
-    "course": 2,
-    "title": "Widoki i szablony"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 5,
-  "fields": {
-    "course": 3,
-    "title": "Podstawy baz danych"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 6,
-  "fields": {
-    "course": 3,
-    "title": "Zapytania SQL"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 7,
-  "fields": {
-    "course": 3,
-    "title": "��czenie tabel i praktyka"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 8,
-  "fields": {
-    "course": 4,
-    "title": "Frontend aplikacji"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 9,
-  "fields": {
-    "course": 4,
-    "title": "Backend aplikacji"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 10,
-  "fields": {
-    "course": 4,
-    "title": "Publikacja projektu"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 11,
-  "fields": {
-    "course": 1,
-    "title": "Wprowadzenie do Pythona"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 12,
-  "fields": {
-    "course": 5,
-    "title": "Podstawy Gita"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 13,
-  "fields": {
-    "course": 5,
-    "title": "Praca na branchach"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 14,
-  "fields": {
-    "course": 5,
-    "title": "GitHub w praktyce"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 15,
-  "fields": {
-    "course": 6,
-    "title": "HTML podstawy"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 16,
-  "fields": {
-    "course": 6,
-    "title": "CSS podstawy"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 17,
-  "fields": {
-    "course": 6,
-    "title": "Uk�ad strony"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 18,
-  "fields": {
-    "course": 7,
-    "title": "Start z JavaScriptem"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 19,
-  "fields": {
-    "course": 7,
-    "title": "Funkcje i DOM"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 20,
-  "fields": {
-    "course": 7,
-    "title": "Praktyka"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 21,
-  "fields": {
-    "course": 8,
-    "title": "Podstawy API"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 22,
-  "fields": {
-    "course": 8,
-    "title": "Serializery i widoki"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 23,
-  "fields": {
-    "course": 8,
-    "title": "Autoryzacja i testy"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 24,
-  "fields": {
-    "course": 9,
-    "title": "Wprowadzenie do Dockera"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 25,
-  "fields": {
-    "course": 9,
-    "title": "Obrazy i Dockerfile"
-  }
-},
-{
-  "model": "courses.module",
-  "pk": 26,
-  "fields": {
-    "course": 9,
-    "title": "Docker Compose"
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 2,
-  "fields": {
-    "module": 1,
-    "title": "Czym jest Python?",
-    "content": "Python to popularny j�zyk programowania u�ywany do tworzenia aplikacji, analizy danych i automatyzacji."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 3,
-  "fields": {
-    "module": 1,
-    "title": "Instalacja �rodowiska",
-    "content": "W tej lekcji omawiamy instalacj� Pythona i uruchamianie pierwszego programu."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 5,
-  "fields": {
-    "module": 2,
-    "title": "Co to jest Django?",
-    "content": "Wprowadzenie do frameworka Django i jego zastosowa� przy budowie aplikacji webowych."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 6,
-  "fields": {
-    "module": 2,
-    "title": "Struktura projektu",
-    "content": "Poznasz pliki projektu Django, aplikacje i rol� settings.py, urls.py oraz manage.py."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 7,
-  "fields": {
-    "module": 2,
-    "title": "Pierwsza aplikacja",
-    "content": "Tworzymy now� aplikacj� Django i pod��czamy j� do projektu."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 8,
-  "fields": {
-    "module": 3,
-    "title": "Modele danych",
-    "content": "Nauczysz si� tworzy� modele reprezentuj�ce dane w bazie."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 9,
-  "fields": {
-    "module": 3,
-    "title": "Migracje",
-    "content": "Om�wienie makemigrations i migrate oraz aktualizacji schematu bazy."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 10,
-  "fields": {
-    "module": 3,
-    "title": "Panel admina",
-    "content": "Poznasz mo�liwo�ci panelu administracyjnego Django i zarz�dzania danymi."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 11,
-  "fields": {
-    "module": 4,
-    "title": "Widoki funkcyjne",
-    "content": "Tworzymy pierwsze widoki i zwracamy odpowiedzi HTML."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 12,
-  "fields": {
-    "module": 4,
-    "title": "Szablony HTML",
-    "content": "Dowiesz si�, jak dzia�a renderowanie szablon�w i dziedziczenie base.html."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 13,
-  "fields": {
-    "module": 4,
-    "title": "Routing URL",
-    "content": "��czenie widok�w z adresami URL i u�ywanie nazwanych �cie�ek."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 14,
-  "fields": {
-    "module": 5,
-    "title": "Czym jest baza danych?",
-    "content": "Podstawy baz danych, rekord�w, tabel i relacji."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 15,
-  "fields": {
-    "module": 5,
-    "title": "Tabele i rekordy",
-    "content": "Jak organizowa� dane w tabelach i interpretowa� rekordy."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 16,
-  "fields": {
-    "module": 5,
-    "title": "Klucze g��wne i obce",
-    "content": "Poznasz podstawy relacji mi�dzy tabelami przy u�yciu kluczy."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 17,
-  "fields": {
-    "module": 6,
-    "title": "SELECT i WHERE",
-    "content": "Pobieranie danych z tabel i filtrowanie wynik�w."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 18,
-  "fields": {
-    "module": 6,
-    "title": "ORDER BY i GROUP BY",
-    "content": "Sortowanie danych i podstawowe grupowanie wynik�w."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 19,
-  "fields": {
-    "module": 6,
-    "title": "INSERT UPDATE DELETE",
-    "content": "Dodawanie, aktualizacja i usuwanie rekord�w w SQL."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 20,
-  "fields": {
-    "module": 7,
-    "title": "JOIN",
-    "content": "W tej lekcji om�wimy ��czenie danych z wielu tabel."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 21,
-  "fields": {
-    "module": 7,
-    "title": "Praktyczne zapytania",
-    "content": "Przyk�ady praktycznych zapyta� do bazy danych w codziennej pracy."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 22,
-  "fields": {
-    "module": 7,
-    "title": "Najcz�stsze b��dy SQL",
-    "content": "B��dy pocz�tkuj�cych i sposoby ich diagnozowania."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 23,
-  "fields": {
-    "module": 8,
-    "title": "HTML w praktyce",
-    "content": "Budowa struktury strony z u�yciem podstawowych znacznik�w HTML."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 24,
-  "fields": {
-    "module": 8,
-    "title": "Stylowanie CSS",
-    "content": "Wprowadzenie do styl�w, klas, kolor�w, odst�p�w i prostego layoutu."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 25,
-  "fields": {
-    "module": 8,
-    "title": "Responsywno��",
-    "content": "Dostosowanie wygl�du strony do ekran�w mobilnych i desktopowych."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 26,
-  "fields": {
-    "module": 9,
-    "title": "Obs�uga formularzy",
-    "content": "Poznasz wysy�anie danych z formularza i odbieranie ich po stronie serwera."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 27,
-  "fields": {
-    "module": 9,
-    "title": "Logika aplikacji",
-    "content": "Tworzenie prostych regu� dzia�ania aplikacji i przetwarzanie danych."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 28,
-  "fields": {
-    "module": 9,
-    "title": "Autoryzacja u�ytkownika",
-    "content": "Om�wienie logowania, wylogowania i ograniczania dost�pu do zasob�w."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 29,
-  "fields": {
-    "module": 10,
-    "title": "Przygotowanie projektu",
-    "content": "Porz�dkowanie aplikacji przed publikacj� i testowaniem."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 30,
-  "fields": {
-    "module": 10,
-    "title": "Podstawy wdro�enia",
-    "content": "Co trzeba przygotowa�, aby aplikacj� uruchomi� poza lokalnym �rodowiskiem."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 31,
-  "fields": {
-    "module": 10,
-    "title": "Utrzymanie i rozw�j",
-    "content": "Dalsza rozbudowa projektu, poprawki i organizacja pracy po wdro�eniu."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 32,
-  "fields": {
-    "module": 11,
-    "title": "Instalacja Pythona",
-    "content": "Jak zainstalowa� Pythona i przygotowa� �rodowisko pracy."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 33,
-  "fields": {
-    "module": 11,
-    "title": "Zmienne i typy danych",
-    "content": "Podstawowe typy danych, zmienne i operacje w Pythonie."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 34,
-  "fields": {
-    "module": 12,
-    "title": "Instalacja Gita",
-    "content": "Instalacja Gita i sprawdzenie poprawno�ci konfiguracji."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 35,
-  "fields": {
-    "module": 12,
-    "title": "Pierwsze repozytorium",
-    "content": "Tworzenie repozytorium i podstawowy workflow pracy."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 36,
-  "fields": {
-    "module": 12,
-    "title": "Commit i historia zmian",
-    "content": "Zapisywanie zmian i przegl�d historii projektu."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 37,
-  "fields": {
-    "module": 13,
-    "title": "Tworzenie branchy",
-    "content": "Jak tworzy� osobne ga��zie do nowych funkcji."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 38,
-  "fields": {
-    "module": 13,
-    "title": "Merge branchy",
-    "content": "��czenie zmian z r�nych ga��zi projektu."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 39,
-  "fields": {
-    "module": 13,
-    "title": "Rozwi�zywanie konflikt�w",
-    "content": "Podstawy naprawy konflikt�w podczas scalania."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 40,
-  "fields": {
-    "module": 14,
-    "title": "Push do GitHuba",
-    "content": "Wysy�anie lokalnego repozytorium na GitHuba."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 41,
-  "fields": {
-    "module": 14,
-    "title": "Pull request",
-    "content": "Wsp�praca przez pull requesty i code review."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 42,
-  "fields": {
-    "module": 14,
-    "title": "README projektu",
-    "content": "Tworzenie prostego i czytelnego README."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 43,
-  "fields": {
-    "module": 15,
-    "title": "Struktura dokumentu HTML",
-    "content": "Poznasz podstawowe znaczniki i uk�ad dokumentu HTML."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 44,
-  "fields": {
-    "module": 15,
-    "title": "Nag��wki, akapity i linki",
-    "content": "Tworzenie podstawowych element�w tre�ci w HTML."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 45,
-  "fields": {
-    "module": 15,
-    "title": "Listy i obrazy",
-    "content": "Dodawanie list oraz obraz�w do strony."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 46,
-  "fields": {
-    "module": 16,
-    "title": "Selektory CSS",
-    "content": "Podstawowe sposoby stylowania element�w strony."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 47,
-  "fields": {
-    "module": 16,
-    "title": "Kolory i czcionki",
-    "content": "Zmiana kolor�w, t�a i wygl�du tekstu."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 48,
-  "fields": {
-    "module": 16,
-    "title": "Margin, padding, border",
-    "content": "Model pude�kowy i odst�py w CSS."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 49,
-  "fields": {
-    "module": 17,
-    "title": "Flexbox",
-    "content": "Nowoczesne uk�adanie element�w w jednym wymiarze."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 50,
-  "fields": {
-    "module": 17,
-    "title": "Grid",
-    "content": "Tworzenie bardziej z�o�onych layout�w przy u�yciu CSS Grid."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 51,
-  "fields": {
-    "module": 17,
-    "title": "Responsywno��",
-    "content": "Dostosowanie strony do r�nych urz�dze�."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 52,
-  "fields": {
-    "module": 18,
-    "title": "Zmienne i typy",
-    "content": "Podstawowe typy danych i deklarowanie zmiennych w JavaScript."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 53,
-  "fields": {
-    "module": 18,
-    "title": "Operatory i warunki",
-    "content": "Instrukcje warunkowe i operatory logiczne."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 54,
-  "fields": {
-    "module": 18,
-    "title": "P�tle",
-    "content": "Powtarzanie operacji z u�yciem p�tli."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 55,
-  "fields": {
-    "module": 19,
-    "title": "Funkcje",
-    "content": "Tworzenie i wywo�ywanie funkcji."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 56,
-  "fields": {
-    "module": 19,
-    "title": "Manipulacja DOM",
-    "content": "Zmiana zawarto�ci strony przy u�yciu JavaScript."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 57,
-  "fields": {
-    "module": 19,
-    "title": "Obs�uga zdarze�",
-    "content": "Klikni�cia, formularze i reakcja na akcje u�ytkownika."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 58,
-  "fields": {
-    "module": 20,
-    "title": "Prosty kalkulator",
-    "content": "�wiczenie praktyczne z logik� i interfejsem."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 59,
-  "fields": {
-    "module": 20,
-    "title": "Lista zada�",
-    "content": "Budowa ma�ej aplikacji TODO."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 60,
-  "fields": {
-    "module": 20,
-    "title": "Walidacja formularza",
-    "content": "Sprawdzanie poprawno�ci danych w formularzu."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 61,
-  "fields": {
-    "module": 21,
-    "title": "Czym jest REST API",
-    "content": "Poznasz podstawowe za�o�enia REST i komunikacji klient-serwer."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 62,
-  "fields": {
-    "module": 21,
-    "title": "Instalacja DRF",
-    "content": "Dodanie Django REST Framework do projektu i podstawowa konfiguracja."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 63,
-  "fields": {
-    "module": 21,
-    "title": "Pierwszy endpoint",
-    "content": "Tworzenie pierwszego widoku API zwracaj�cego dane."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 64,
-  "fields": {
-    "module": 22,
-    "title": "Serializery",
-    "content": "Konwersja danych modeli na JSON i walidacja danych wej�ciowych."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 65,
-  "fields": {
-    "module": 22,
-    "title": "APIView i generics",
-    "content": "Budowa endpoint�w przy u�yciu klas DRF."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 66,
-  "fields": {
-    "module": 22,
-    "title": "CRUD API",
-    "content": "Tworzenie pe�nych endpoint�w do dodawania, edycji i usuwania danych."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 67,
-  "fields": {
-    "module": 23,
-    "title": "Permission classes",
-    "content": "Ograniczanie dost�pu do endpoint�w."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 68,
-  "fields": {
-    "module": 23,
-    "title": "Token authentication",
-    "content": "Podstawy autoryzacji tokenowej."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 69,
-  "fields": {
-    "module": 23,
-    "title": "Testowanie API",
-    "content": "Pisanie prostych test�w dla endpoint�w REST."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 70,
-  "fields": {
-    "module": 24,
-    "title": "Czym jest Docker",
-    "content": "Wprowadzenie do kontener�w i ich zastosowa�."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 71,
-  "fields": {
-    "module": 24,
-    "title": "Instalacja Dockera",
-    "content": "Instalacja Dockera i sprawdzenie dzia�ania �rodowiska."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 72,
-  "fields": {
-    "module": 24,
-    "title": "Pierwszy kontener",
-    "content": "Uruchomienie pierwszego kontenera i zrozumienie podstawowych komend."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 73,
-  "fields": {
-    "module": 25,
-    "title": "Budowanie obrazu",
-    "content": "Tworzenie w�asnego obrazu aplikacji."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 74,
-  "fields": {
-    "module": 25,
-    "title": "Dockerfile",
-    "content": "Pisanie pliku Dockerfile krok po kroku."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 75,
-  "fields": {
-    "module": 25,
-    "title": "Tagowanie i wersje",
-    "content": "Zarz�dzanie wersjami obraz�w."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 76,
-  "fields": {
-    "module": 26,
-    "title": "Compose basics",
-    "content": "��czenie kilku us�ug w jednym �rodowisku."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 77,
-  "fields": {
-    "module": 26,
-    "title": "Aplikacja + baza danych",
-    "content": "Uruchamianie aplikacji wraz z baz� danych w Docker Compose."
-  }
-},
-{
-  "model": "courses.lesson",
-  "pk": 78,
-  "fields": {
-    "module": 26,
-    "title": "Praca developerska",
-    "content": "Najwygodniejszy workflow lokalny z Dockerem."
-  }
-}
 ]
